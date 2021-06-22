@@ -1,4 +1,4 @@
-export const testFrdString = `"| "| "| "| Standardized FRD file, measured by OmniMic "1100200.omm" on 11/26/2013 by userID: 
+export const rs225p4 =  `"| "| "| "| Standardized FRD file, measured by OmniMic "1100200.omm" on 11/26/2013 by userID: 
 "| "| "| "| Equivalent to driven with 2.83V and measured at 1m
 "| "| "| "| Acoustic origin is 85.73useconds behind the mounting plane.
 "| "| "| "| 

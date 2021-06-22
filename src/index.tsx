@@ -1,9 +1,9 @@
 import * as React from "react"
 import { render } from "react-dom"
-import { Renderer } from "./omp"
-import { DataClass } from "./DataClass"
+import { Renderer } from "./CanvasRenderer" 
 import { parseFrdFile } from "./frdParser"
-import { testFrdString } from "./test"
+import { rs225p4 } from "./resources/rs225p4"
+import { rst28f4 } from "./resources/rst28f4"
 import { createGlobalStyle } from "styled-components"
 import { Provider, defaultTheme, Grid, View, Header, Content }  from "@adobe/react-spectrum"
 
@@ -27,9 +27,12 @@ const App = () => {
     canvasRef.current.width = bcr.width * 2
     canvasRef.current.height = bcr.height * 2
 
-    const frd = parseFrdFile('', testFrdString)
+    const frd = [
+      parseFrdFile('#ff0000', rs225p4),
+      parseFrdFile('#00ff00', rst28f4),
+    ]
 
-    new Renderer(canvasRef.current, new DataClass(frd), setFramesPerSecond)
+    new Renderer(canvasRef.current, frd, setFramesPerSecond)
   })
 
   return <>

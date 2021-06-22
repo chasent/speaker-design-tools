@@ -1,0 +1,4 @@
+1.) Put data into two initial buckets
+2.) Measure distance between buckets
+3.) Draw a line between the buckets when they meet a certain thershold
+4.) Move onto the next bucket, collecting data into it until the thershold is met again

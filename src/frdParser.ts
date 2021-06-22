@@ -5,14 +5,14 @@ export interface FRDLine {
 }
 
 export interface FRDFile {
-  name: string
+  colour: string
   // FRD files are whitespace delimited and are i nthe format:
   // frequency [Hz] , level [dB], and phase [degrees]
   data: FRDLine[]
 }
 
 export const parseFrdFile = (name: string, data: string): FRDFile => ({
-  name,
+  colour: name,
   data: data
     .split('\n')
     .reduce<FRDLine[]>((collector, current) => {

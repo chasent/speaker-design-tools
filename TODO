@@ -1,0 +1,34 @@
+TODO: 
+
+
+
+Optimizations:
+- Use 4k textures instead
+- Turn textures into a lookup map
+  - Chop up 20 - 20k Hz into evenly spaced groups within the logarithm:
+    i.e.  y = (log(x) - log(20)) / 3
+          where
+            y: 0 -> 1
+      average all themeasurements in each group,
+
+      optionally: we could also change the plotter to store data into the texture as
+                  y = (m)x + c where we store m and c in each group to avoid computing
+                  the gradient at all in the shader
+
+  - Pre-compute 
+
+
+
+
+1.) Make lines a constant size
+2.) Draw graph lines
+2.) Draw plot numbers at correct locations
+3.) Implement filters
+4.) Implement Mulitple FRD inputs
+5.) Implement combining responses with filters
+
+
+
+
+
+ss-for-daze
